@@ -1,0 +1,15 @@
+[face_detection]
+#画像から顔を検出して切り取って保存をする
+
+input_dir = ".\\input"   #入力ディレクトリ、画像をいっぱい入れてね？
+output_dir = ".\\output" #出力先
+
+min_size = 20    #検出された顔が縦横どちらかがこれより低ければスルーされる
+min_neighbors = 3 #この値を高くすると顔検出が厳密になるが、検出できない顔が増える
+
+face_scale_top = 1.6    #検出した顔を切り取る際に範囲を上方向に伸ばす
+face_scale_side = 1.3   #左右
+face_scale_bottom = 0.9 #下
+
+debug = false           #デバッグモード、検出した顔の枠を描いた画像を出力
+debug_dir = ".\\debug" #デバックモードでの出力先
